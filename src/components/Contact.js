@@ -3,7 +3,6 @@ import React from "react";
 class Contact extends React.Component {
   render() {
     return (
-      <div className="contact">
         <section id="contact-us" className="blue-bg_contact-us">
           <div className="container">
             <div className="row text-center py-5">
@@ -69,8 +68,7 @@ class Contact extends React.Component {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+      </section>
     );
   }
 }

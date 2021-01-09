@@ -1,8 +1,21 @@
 import React from 'react';
 
 class Home extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      checked: false
+    };
+    this.handleCheck = this.handleCheck.bind(this);
+  }
+
+  handleCheck = () => {
+    this.setState({checked: !this.state.checked});
+  }
+
   render (){
-    return (
+    return (      
       <div className="home">
         <section id="section1">
             <div id="sliderIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -19,7 +32,8 @@ class Home extends React.Component {
                 </div>
             </div>
         </section>
-        <section id="section2" className="blue-bg py-3">
+        <section id="section2" className="blue-bg_home py-3">
+            <div className="overlap_top-bg"><img src="../img/top.png" alt="test" className="img-fluid"></img></div>
             <div className="container">
                 <div className="row text-center py-5">
                     <div className="col col-lg-12">
@@ -39,9 +53,9 @@ class Home extends React.Component {
                         Sharing this code may cost you to lose your event access.
                     </label>
                     <div className="row justify-content-end align-items-center mt-2">
-                        <div className="col-9">
+                        <div className="col-9 text-start">
                             <div className="form-check px-0">
-                                <input type="checkbox" id="terms"/>
+                                <input type="checkbox" id="terms"  onChange={this.handleCheck} defaultChecked={this.state.checked}/>
                                 <label className="form-check-label px-1" htmlFor="terms">
                                     I agree to the Terms of Service
                                     and Privacy Policy.
@@ -49,11 +63,12 @@ class Home extends React.Component {
                             </div>
                         </div>
                         <div className="col-3 text-end">
-                            <button type="submit" className="btn btn-event-code">Join</button>
+                            { this.state.checked ? <button type="submit" className="btn btn-event-code">Join</button> : <button type="submit" className="btn btn-event-code" disabled>Join</button> }
                         </div>
                     </div>
                 </form>
             </div>
+            <div className="overlap_bottom-bg"><img src="../img/bottom.png" alt="test" className="img-fluid"></img></div>
         </section>
       </div>
     );

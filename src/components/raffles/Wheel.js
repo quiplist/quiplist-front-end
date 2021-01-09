@@ -4,15 +4,15 @@ import React from "react";
 class Wheel extends React.Component {
   state = {
     list: [
-      "$100",
-      "$500",
-      "$9,999",
-      "$1",
-      "$60",
-      "$1,000",
-      "$4.44",
-      "$0",
-      "$333"
+      "Gena Duckett " ,
+      "Charley Tenaglia" , 
+      "Ute Broce " ,
+      "Jeannie Harms  ",
+      "Janel Hales"  ,
+      "Steven Soler " ,
+      "Robt Lauder " ,
+      "Shawnna Korte  ",
+      "Kelsi Drysdale " 
     ],
     radius: 75, // PIXELS
     rotate: 0, // DEGREES
@@ -208,3 +208,8 @@ class Wheel extends React.Component {
 }
 
 export default Wheel;
+
+
+
+
+
