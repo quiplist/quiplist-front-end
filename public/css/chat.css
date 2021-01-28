@@ -1,0 +1,77 @@
+.live-stream-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chat-user-number {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Arial';
+}
+
+.chat-name h3 {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Arial';
+}
+
+.chat-wrapper p {
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Arial';
+}
+
+.chat-wrapper {
+    height: 400px;
+    background: #fff;
+    overflow-y: auto;
+}
+
+.chat-container{
+    background: #fff;
+}
+
+.chat-container form input[type="text"] {
+    border-radius: 0px !important;
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+
+.chat-container input[type="submit"] {
+    border-radius: 0px !important;
+    font-family: 'Arial';
+    width: 100%;
+}
+
+.reactions {
+    margin-top: 20px;
+   }
+   .reactions .reactions-counter {
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .reactions .emoji-mart {
+    z-index: 999;
+   }
+   .reactions .emoji-mart-anchors {
+    display: none;
+   }
+   .reactions .emoji-mart-search {
+    display: none;
+   }
+   .reactions .emoji-mart-bar {
+    display: none;
+   }
+   .reactions .emoji-mart-scroll {
+    overflow: auto;
+    height: auto;
+   }
+   .reactions .emoji-mart-category-label {
+    display: none;
+   }
+
+@media screen and (max-width:767px){
+    .chat-live-wrapper .col {
+        width: 100%;
+    }
+}

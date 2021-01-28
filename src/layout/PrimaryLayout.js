@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import Home from "../components/Home";
 import Login from "../components/Login";
 import Contact from "../components/Contact";
-
+import Footer from "./Footer";
 
 class PrimaryLayout extends React.Component {
     constructor (props) {
@@ -64,6 +64,7 @@ class PrimaryLayout extends React.Component {
               <Route path="/contact" component={Contact} />
               <Route path="/login" component={Login} />
             </Switch>
+            <Footer />
           </Router>
         );
       }

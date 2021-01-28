@@ -1,8 +1,10 @@
 /* random name */
-.RandomPicker__choice {
+.RandomPicker__choice,
+.RandomNumberPicker__choice {
     position: relative;
     margin-bottom: 20px;
     max-width: 700px;
+    display: flex;
 }
 
 span#choice {
@@ -77,6 +79,62 @@ h2#swal2-title{
     justify-content: center;
 }
 
+.numberWrapper {
+    position: relative;
+}
+
+#choiceNumber {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-family: "DinNext Bold";
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.RandomNumberPicker__choice:before {
+    content: '';
+    background: url(../img/random_top.png);
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -164px;
+    left: 62%;
+    transform: translate(-50%, 0%);
+}
+
+.RandomNumberPicker__choice:after {
+    content: '';
+    background: url(../img/random_bottom.png);
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -94px;
+    left: 61%;
+    transform: translate(-50%, 0%);
+}
+
+.RandomNumber__controls {
+    position: absolute;
+    bottom: 20%;
+}
+
+
+
+@media screen and (max-width:1024px){
+    .RandomNumber__controls {
+        position: absolute;
+        bottom: 30%;
+    }
+}
+
 @media screen and (max-width:600px){
     .swal2-popup.swal2-modal.swal2-show {
         background-position: center;
@@ -96,5 +154,66 @@ h2#swal2-title{
         background-size: contain;
         top: -37px;
         left: 0;
+    }
+
+    .RandomNumberPicker__choice:after {
+        content: '';
+        background: url(../img/random_bottom.png);
+        position: absolute;
+        width: 75%;
+        height: 75%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: -68px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .RandomNumberPicker__choice:before {
+        content: '';
+        background: url(../img/random_top.png);
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -64px;
+        left: 64%;
+        transform: translate(-50%, 0%);
+    }
+}
+
+@media screen and (max-width:360px){
+    .RandomNumber__controls {
+        position: absolute;
+        bottom: 25%;
+    }
+}
+
+@media screen and (max-width:320px){
+    .RandomNumberPicker__choice:after {
+        content: '';
+        background: url(../img/random_bottom.png);
+        position: absolute;
+        width: 75%;
+        height: 75%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: -58px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .RandomNumberPicker__choice:before {
+        content: '';
+        background: url(../img/random_top.png);
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -53px;
+        left: 64%;
+        transform: translate(-50%, 0%);
     }
 }

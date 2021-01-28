@@ -13,7 +13,6 @@ class Login extends React.Component{
         this.toggleLogin = this.toggleLogin.bind(this);
     }
 
-
     toggleLogin = () => {
         this.setState({
           isVisible: !this.state.isVisible

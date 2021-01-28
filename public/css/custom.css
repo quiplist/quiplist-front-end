@@ -295,20 +295,6 @@ button.btn.btn-sign-in:hover {
 .event-code-wrapper .form-check label{
   font-size: 10px;
 }
-.chat-wrapper {
-  background: #fff;
-}
-.chat-wrapper__number .user__number {
-  color: #231f20;
-  font-family: 'Arial';
-  font-size: 60px;
-}
-.chat-wrapper p{
-  color: #231f20;
-  font-family: 'Arial';
-  font-size: 20px;
-  border-bottom: 1px solid #000;
-}
 .connect-with-us {
   text-align: center;
 }
@@ -496,6 +482,7 @@ button.btn.btn-sign-in {
   bottom: 0;
   left: 0;
 }
+
 @media screen and (max-width: 1024px){
   .carousel-inner{
       height: auto;
@@ -506,6 +493,11 @@ button.btn.btn-sign-in {
  .event-code-wrapper{
    max-width: 50%;
  }
+
+ .sidebar-mobile_view .label {
+    display: block;
+    font-size: 15px;
+  }
 }
 @media screen and (max-width:767px){
   .before-lines {
@@ -528,4 +520,27 @@ button.btn.btn-sign-in {
   .name-wrapper p{
       font-size: 12px;
  }
+  .dataTables_wrapper .row > * {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .sidebar{
+    padding: 10px;
+  }
+
+  .sidebar-mobile_view .label {
+    display: none;
+  }
+
+  .event-wrapper .col {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .nav-tabs .nav-link{
+    width: 100%;
+    margin: 10px 0px;
+  }
 }
