@@ -43,20 +43,138 @@
     width: 100%;
 }
 
-.btn-react {
-    border: 0;
-    width: 10%;
-    height: 10%;
-    background: transparent;
+.video-wrapper {
+    height: 500px;
+    background: #000;
 }
 
-.btn-react:hover {
-    transform: translateY(-15px);
+
+.feed {
+    position: relative;
+    height: 50px;
+}
+
+.like-btn {
+    width: auto;
+    height: auto;
+    background: #B0B3B8;
+    position: absolute;
+    bottom: 13px;
+    left: 0px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Arial';
+    padding: 2px 20px;
+}
+
+.like-btn:hover {
+    color: #fff;
+}
+
+.like-btn .reaction-box { 
+      position: absolute; 
+      width: 312px; height: 55px; 
+      background: transparent; 
+      border-radius: 28px; 
+      left: -25px; bottom: 25px; 
+      display: none; 
+}
+
+.like-btn:hover .reaction-box { 
+    display: block; 
+}
+
+.reaction-box{
+    left: -25px;
+    bottom: 35px; 
+}
+
+.reaction-box .reaction-icon {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      border-radius: 20px;
+      margin: 8px -1px 0 8px;
+      text-align: center;
+}
+
+.reaction-box .reaction-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.reaction-box .reaction-icon label {
+    padding: 3px 5px 3px 5px;
+    position: relative;
+    top: -24px;
+    border-radius: 10px;
+    font-size: 11px;
+    color: #FFF;
+    background: #333;
+}
+
+.like-btn:hover .reaction-box{
+    transition: 1s ease-in;
+}
+
+.like-btn:hover .reaction-box .reaction-icon:hover {  
+    transform: scale(1.4);
+    transform-origin: bottom;
+}
+
+
+.like-btn::before { 
+      content: "."; 
+      opacity: 0; 
+      display: block; 
+      width: 44px; height: 10px; 
+      position: absolute; 
+      top: -10px; left: 0; 
+}
+
+.like-btn label { 
+    visibility: hidden; 
+ }
+
+ .reaction-icon:hover label { 
+       visibility: visible; 
+
+ }
+
+.reaction-icon { 
+   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   /* opacity: 0;  
+   transform: translate(0, 100px) scale(0); */
+ }
+
+.like-btn:hover .reaction-box .reaction-icon.show{
+    opacity: 1; 
+    transform: translate(0, 0) scale(1); 
+}
+
+
+.reaction-box .show {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 8px -1px 0 8px;
+    text-align: center;
+    transform: translateY(-20px);
     transition: 0.3s ease-in;
 }
 
-.btn-react:focus {
-    outline: none;
+.reaction-box .show img {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width:1024px){
+    .button-wrapper button {
+        width: 10%;
+        height: 10%;
+    }
 }
 
 @media screen and (max-width:767px){
@@ -64,8 +182,12 @@
         width: 100%;
     }
 
-    .btn-react {
-        width: 15%;
-        height: 15%;
+    .button-wrapper button {
+        width: 20%;
+        height: 20%;
+    }
+
+    .button-wrapper{
+        margin-bottom: 30px;
     }
 }

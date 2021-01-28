@@ -12,7 +12,6 @@ class FBStream extends Component {
                   <div className="row">
                     <div className="col-12">
                         <div className="video-wrapper">
-                          video
                         </div>
                     </div>
                     <div className="col-12">
