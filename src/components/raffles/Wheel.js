@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import Swal from 'sweetalert2';
 import WheelComponent from 'react-wheel-of-prizes'
 import 'react-wheel-of-prizes/dist/index.css'

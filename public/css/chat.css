@@ -43,35 +43,29 @@
     width: 100%;
 }
 
-.reactions {
-    margin-top: 20px;
-   }
-   .reactions .reactions-counter {
-    display: flex;
-    flex-wrap: wrap;
-   }
-   .reactions .emoji-mart {
-    z-index: 999;
-   }
-   .reactions .emoji-mart-anchors {
-    display: none;
-   }
-   .reactions .emoji-mart-search {
-    display: none;
-   }
-   .reactions .emoji-mart-bar {
-    display: none;
-   }
-   .reactions .emoji-mart-scroll {
-    overflow: auto;
-    height: auto;
-   }
-   .reactions .emoji-mart-category-label {
-    display: none;
-   }
+.btn-react {
+    border: 0;
+    width: 10%;
+    height: 10%;
+    background: transparent;
+}
+
+.btn-react:hover {
+    transform: translateY(-15px);
+    transition: 0.3s ease-in;
+}
+
+.btn-react:focus {
+    outline: none;
+}
 
 @media screen and (max-width:767px){
     .chat-live-wrapper .col {
         width: 100%;
+    }
+
+    .btn-react {
+        width: 15%;
+        height: 15%;
     }
 }
