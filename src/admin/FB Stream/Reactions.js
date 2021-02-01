@@ -4,12 +4,12 @@ class Reactions extends Component {
   constructor() {
     super();
     this.state = {
-      activeLike: false,
-      activeHeart: false,
-      activeHappy: false,
-      activeWow: false,
-      activeSad: false,
-      activeAngry: false
+      activeLike: true,
+      activeHeart: true,
+      activeHappy: true,
+      activeWow: true,
+      activeSad: true,
+      activeAngry: true,
     };
     this.setLikeIcon = this.setLikeIcon.bind(this);
     this.setLoveIcon = this.setLoveIcon.bind(this);
@@ -22,19 +22,35 @@ class Reactions extends Component {
   setLikeIcon = () => {
     this.setState({
       activeLike: !this.state.activeLike,
+      activeHeart: true,
+      activeHappy: true,
+      activeWow: true,
+      activeSad: true,
+      activeAngry: true
     })
+
     var image = document.getElementById("activeEmoji");
     if(this.state.activeLike){
       image.src ="/img/active-like.png";
     }else{
       image.src ="/img/default-icon.png";
+
     }
+
+    console.log("ACTIVE" + this.state.activeLike)
   }
 
   setLoveIcon = () => {
+    
     this.setState({
       activeHeart: !this.state.activeHeart,
+      activeLike: true,
+      activeHappy: true,
+      activeWow: true,
+      activeSad: true,
+      activeAngry: true
     })
+
     var image = document.getElementById("activeEmoji");
     if(this.state.activeHeart){
       image.src ="/img/active-heart.png";
@@ -46,7 +62,13 @@ class Reactions extends Component {
   setHahaIcon = () => {
     this.setState({
       activeHappy: !this.state.activeHappy,
+      activeLike: true,
+      activeHeart: true,
+      activeWow: true,
+      activeSad: true,
+      activeAngry: true
     })
+
     var image = document.getElementById("activeEmoji");
     if(this.state.activeHappy){
       image.src ="/img/active-laugh.png";
@@ -57,20 +79,14 @@ class Reactions extends Component {
 
   setWowIcon = () => {
     this.setState({
-      activeSad: !this.state.activeSad,
-    })
-    var image = document.getElementById("activeEmoji");
-    if(this.state.activeSad){
-      image.src ="/img/active-wow.png";
-    }else{
-      image.src ="/img/default-icon.png";
-    }
-  }
-
-  setSadIcon = () => {
-    this.setState({
       activeWow: !this.state.activeWow,
+      activeLike: true,
+      activeHeart: true,
+      activeHappy: true,
+      activeSad: true,
+      activeAngry: true
     })
+
     var image = document.getElementById("activeEmoji");
     if(this.state.activeWow){
       image.src ="/img/active-wow.png";
@@ -79,10 +95,35 @@ class Reactions extends Component {
     }
   }
 
+  setSadIcon = () => {
+    this.setState({
+      activeSad: !this.state.activeSad,
+      activeLike: true,
+      activeHeart: true,
+      activeHappy: true,
+      activeWow: true,
+      activeAngry: true
+    })
+
+
+    var image = document.getElementById("activeEmoji");
+    if(this.state.activeSad){
+      image.src ="/img/active-sad.png";
+    }else{
+      image.src ="/img/default-icon.png";
+    }
+  }
+
   setAngryIcon = () => {
     this.setState({
       activeAngry: !this.state.activeAngry,
+      activeLike: true,
+      activeHeart: true,
+      activeHappy: true,
+      activeWow: true,
+      activeSad: true
     })
+
     var image = document.getElementById("activeEmoji");
     if(this.state.activeAngry){
       image.src ="/img/active-angry.png";

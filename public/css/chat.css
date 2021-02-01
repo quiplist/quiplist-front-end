@@ -101,6 +101,7 @@
 .reaction-box .reaction-icon img {
     width: 40px;
     height: 40px;
+    z-index: 2;
 }
 
 .reaction-box .reaction-icon label {
@@ -111,14 +112,16 @@
     font-size: 11px;
     color: #FFF;
     background: #333;
+    z-index: 0;
 }
 
 .like-btn:hover .reaction-box{
     transition: 1s ease-in;
 }
-
+/* new */
 .like-btn:hover .reaction-box .reaction-icon:hover {  
-    transform: scale(1.4);
+    transform: translateY(-20px);
+    transition: 0.3s ease-in;
     transform-origin: bottom;
 }
 
@@ -140,18 +143,19 @@
     visibility: visible; 
 
  }
-
+/* new */
 .reaction-icon { 
    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-   /* opacity: 0;  
-   transform: translate(0, 100px) scale(0); */
+   opacity: 0;  
+   transform: translate(0, 100px) scale(0);
  }
 
+ /* new */
 .like-btn:hover .reaction-box .reaction-icon.show{
     opacity: 1; 
-    transform: translate(0, 0) scale(1); 
+    transform: translate(0, 0) scale(1);
+    transition: 0.2s ease-in; 
 }
-
 
 .reaction-box .show {
     opacity: 1;
@@ -182,6 +186,14 @@ a.like-btn h4 {
     margin: 0px 0px 0px 10px;
 }
 
+/* new */
+.like-btn:hover .reaction-box .reaction-icon:hover {
+    transform: translateY(-20px);
+    transition: 0.3s ease-in;
+    transform-origin: bottom;
+}
+
+
 @media screen and (max-width:1024px){
     .button-wrapper button {
         width: 10%;
@@ -189,6 +201,8 @@ a.like-btn h4 {
     }
 }
 
+
+/* newly added */
 @media screen and (max-width:767px){
     .chat-live-wrapper .col {
         width: 100%;
@@ -201,5 +215,24 @@ a.like-btn h4 {
 
     .button-wrapper{
         margin-bottom: 30px;
+    }
+
+    .feed{
+        margin-bottom: 10px;
+    }
+
+    .feed .reaction-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .feed .reaction-box .show{
+        width: 30px;
+        height: 30px;
+    }
+
+    .feed .reaction-box {
+        width: max-content;
+        left: 0;
     }
 }
