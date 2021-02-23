@@ -21,6 +21,7 @@ class App extends Component {
             <Route exact path="/admin/pages" render={(props) => <SideBarLayout {...props}/> } />
             <Route exact path="/admin/create-event" render={(props) => <SideBarLayout {...props}/> } />
             <Route exact path="/admin/event/view" render={(props) => <SideBarLayout {...props}/> } />
+            <Route exact path="/admin/profile" render={(props) => <SideBarLayout {...props}/> } />
            </Switch>
         </BrowserRouter>
       </div>

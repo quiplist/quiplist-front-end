@@ -120,7 +120,7 @@
 }
 /* new */
 .like-btn:hover .reaction-box .reaction-icon:hover {  
-    transform: translateY(-20px);
+    transform: translateY(-5px);
     transition: 0.3s ease-in;
     transform-origin: bottom;
 }
@@ -157,6 +157,7 @@
     transition: 0.2s ease-in; 
 }
 
+/* new */
 .reaction-box .show {
     opacity: 1;
     width: 40px;
@@ -165,7 +166,7 @@
     border-radius: 20px;
     margin: 8px -1px 0 8px;
     text-align: center;
-    transform: translateY(-20px);
+    transform: translateY(-5px);
     transition: 0.3s ease-in;
 }
 

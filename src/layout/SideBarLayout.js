@@ -4,6 +4,7 @@ import Dashboard from '../admin/Dashboard';
 import Events from '../admin/Events';
 import Users from '../admin/Users';
 import FBStream from "../admin/FB Stream/FBStream";
+import Profile from "../admin/Profile";
 import View from '../admin/actions/View/View';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
@@ -29,6 +30,7 @@ class SideBarLayout extends React.Component{
                                         <li><Link to="/admin/events">Events</Link></li>
                                         <li><Link to="/admin/users">Users</Link></li>
                                         <li><Link to="/admin/fbstream">FB Live</Link></li>
+                                        <li><Link to="/admin/profile">Profile</Link></li>
                                         <li><Link to="/admin">Logout</Link></li>
                                     </ul>
                                     </BrowserView>
@@ -64,6 +66,7 @@ class SideBarLayout extends React.Component{
                                             <Route path="/admin/users" component={Users} />
                                             <Route path="/admin/event/view" component={View} />
                                             <Route path="/admin/fbstream" component={FBStream} />
+                                            <Route path="/admin/profile" component={Profile} />
                                         </Switch>
                                     </div>
                                 </div>

@@ -346,3 +346,24 @@ div#events_views {
     text-transform: uppercase;
     padding: 10px 50px;
 }
+
+
+/* new */
+.change_admin_pw {
+    background: #E6E6E6;
+    color: #A1A1A1;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.profile-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+@media screen and (max-width:767px){
+    .change_admin_pw{
+        font-size: 12px;
+    }
+}
